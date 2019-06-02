@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Your word's count is {{ word_count }}</h1>
+<br><br><h1>당신이 입력한 단어의 개수는 {{ word_count }}개!</h1><br>
 
-<a href="{% url 'home' %}">Go home</a>
+<h2>입력한 글 : {{ full }}</h2>
 
-<h2>Your text : {{ full }}</h2>
-
-<h2>Word count :</h2>
+<p>==========================</p>
+<h2>단어 분석:</h2><br>
 {% for word, count in dictionary %}
     <p>{{ word }} : {{ count }}</p>
+    {% empty %}
+    <p>아무것도 입력하지 않았어요!</p><br>
 {% endfor %}
+
+<p>==========================</p>
+<br><a href="{% url 'home' %}" class="btn btn-warning">처음으로</a><br>
+
 {% endblock %}
+

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>About word count</h1>
+<br><br><h1>입력한 글의 단어 수를 세어드려요</h1><br>
 
-<p>hello world.</p>
+<p>글을 입력하고 몇 단어로 이루어져있는지 알아보세요! <br> 단어 분석도 해드립니다~</p>
 
-<a href="{% url 'home' %}">Go Home</a>
+<a href="{% url 'home' %}" class="btn btn-warning">처음으로</a>
 {% endblock %}
